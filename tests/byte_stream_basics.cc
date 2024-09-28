@@ -1,9 +1,9 @@
 #include "byte_stream.hh"
 #include "byte_stream_test_harness.hh"
 
+#include <bits/stdc++.h>
 #include <exception>
 #include <iostream>
-#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -20,10 +20,10 @@ int main()
   try {
     {
       ByteStreamTestHarness test { "construction", 15 };
-      //test.execute( IsClosed { false } );
-      //test.execute( IsFinished { false } );
-      //test.execute( HasError { false } );
-      //all_zeroes( test );
+      // test.execute( IsClosed { false } );
+      // test.execute( IsFinished { false } );
+      // test.execute( HasError { false } );
+      // all_zeroes( test );
     }
 
     /*{
