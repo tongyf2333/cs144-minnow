@@ -20,10 +20,10 @@ int main()
   try {
     {
       ByteStreamTestHarness test { "construction", 15 };
-       test.execute( IsClosed { false } );
-       test.execute( IsFinished { false } );
-       test.execute( HasError { false } );
-       all_zeroes( test );
+      test.execute( IsClosed { false } );
+      test.execute( IsFinished { false } );
+      test.execute( HasError { false } );
+      all_zeroes( test );
     }
 
     {
