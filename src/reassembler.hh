@@ -1,6 +1,8 @@
 #pragma once
 
 #include "byte_stream.hh"
+#include <vector>
+#include <utility>
 
 class Reassembler
 {
@@ -42,4 +44,6 @@ public:
 
 private:
   ByteStream output_; // the Reassembler writes to this ByteStream
+  vector<pair<uint64_t,string> > buffer={};
+  uint64_t stored=0,expected=0,eof_index=1145141919810;
 };
