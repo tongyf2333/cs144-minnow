@@ -1,6 +1,8 @@
 #pragma once
 
+#include <map>
 #include <queue>
+#include <unordered_map>
 
 #include "address.hh"
 #include "ethernet_frame.hh"
@@ -81,4 +83,12 @@ private:
 
   // Datagrams that have been received
   std::queue<InternetDatagram> datagrams_received_ {};
+
+  struct node
+  {
+    EthernetAddress addr;
+    int ttl;
+  };
+  std::map<uint32_t, node> arp_table {};
+  std::vector<std::pair<InternetDatagram, std::pair<Address, int>>> waitlist {};
 };
