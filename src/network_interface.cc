@@ -54,8 +54,8 @@ void NetworkInterface::send_datagram( const InternetDatagram& dgram, const Addre
     EthernetFrame res1;
     res1.header = { ETHERNET_BROADCAST, ethernet_address_, EthernetHeader::TYPE_ARP };
     res1.payload = serialize( res );
-    transmit( res1 );
     waitlist.push_back( make_pair( dgram, make_pair( next_hop, 5000 ) ) );
+    transmit( res1 );
   }
 }
 
@@ -68,6 +68,18 @@ void NetworkInterface::recv_frame( const EthernetFrame& frame )
   if ( frame.header.type == EthernetHeader::TYPE_ARP ) {
     ARPMessage res;
     if ( parse( res, frame.payload ) ) {
+      node tmp;
+      tmp.addr = res.sender_ethernet_address;
+      tmp.ttl = (size_t)30000;
+      arp_table[res.sender_ip_address] = tmp;
+      vector<pair<InternetDatagram, pair<Address, int>>>::iterator it = waitlist.begin();
+      for ( ; it != waitlist.end(); it++ ) {
+        if ( it->second.first == Address::from_ipv4_numeric( res.sender_ip_address ) ) {
+          send_datagram( it->first, it->second.first );
+          waitlist.erase( it );
+          break;
+        }
+      }
       if ( res.opcode == ARPMessage::OPCODE_REQUEST
            && ip_address_ == Address::from_ipv4_numeric( res.target_ip_address ) ) {
         ARPMessage res2;
@@ -81,18 +93,6 @@ void NetworkInterface::recv_frame( const EthernetFrame& frame )
         res1.header = { res.sender_ethernet_address, ethernet_address_, EthernetHeader::TYPE_ARP };
         res1.payload = serialize( res2 );
         transmit( res1 );
-      }
-      node tmp;
-      tmp.addr = res.sender_ethernet_address;
-      tmp.ttl = (size_t)30000;
-      arp_table[res.sender_ip_address] = tmp;
-      vector<pair<InternetDatagram, pair<Address, int>>>::iterator it = waitlist.begin();
-      for ( ; it != waitlist.end(); it++ ) {
-        if ( it->second.first == Address::from_ipv4_numeric( res.sender_ip_address ) ) {
-          send_datagram( it->first, it->second.first );
-          waitlist.erase( it );
-          break;
-        }
       }
     }
   } else if ( frame.header.type == EthernetHeader::TYPE_IPv4 ) {
