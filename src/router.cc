@@ -60,10 +60,9 @@ void Router::route()
   for ( auto& interfacei : _interfaces ) {
     while ( !( interfacei->datagrams_received().empty() ) ) {
       InternetDatagram now = interfacei->datagrams_received().front();
-      if ( now.header.ttl == 0 || now.header.ttl == 1 ) {
-        interfacei->datagrams_received().pop();
+      interfacei->datagrams_received().pop();
+      if ( now.header.ttl == 0 || now.header.ttl == 1 )
         continue;
-      }
       now.header.ttl--;
       now.header.compute_checksum();
       uint32_t dest = now.header.dst;
@@ -85,7 +84,6 @@ void Router::route()
         else
           interface( router_table[pos].interface_num )->send_datagram( now, Address::from_ipv4_numeric( dest ) );
       }
-      interfacei->datagrams_received().pop();
     }
   }
 }
