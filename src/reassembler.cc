@@ -1,5 +1,6 @@
 #include "reassembler.hh"
 #include <assert.h>
+#include <iostream>
 
 using namespace std;
 
@@ -45,10 +46,9 @@ void Reassembler::insert( uint64_t first_index, string data, bool is_last_substr
       pair<uint64_t, string> res;
       res.first = now.first;
       res.second = now.second.substr( 0, min( l - now.first, now.second.size() ) );
-      temp.push_back( res );
+      if(res.second.size()>0) temp.push_back( res );
       if ( now.first + now.second.size() - 1 > r ) {
         uint64_t n = now.second.size();
-        assert( r - now.first + 1 <= now.second.size() );
         now.second = now.second.substr( r - now.first + 1, n - ( r - now.first + 1 ) );
         now.first = r + 1;
       } else {
@@ -58,7 +58,7 @@ void Reassembler::insert( uint64_t first_index, string data, bool is_last_substr
     }
   }
   if ( !flag )
-    temp.push_back( now );
+    if(now.second.size()>0) temp.push_back( now );
   // inserting temp
   size_t pos = 0;
   for ( size_t i = 0; i < temp.size(); i++ ) {
@@ -78,10 +78,6 @@ void Reassembler::insert( uint64_t first_index, string data, bool is_last_substr
     }
   }
   // pushing
-  for ( size_t i = 0; i < buffer.size() - 1; i++ ) {
-    if ( ( buffer[i].first > buffer[i + 1].first ) && buffer.size() == 3 )
-      assert( 0 );
-  }
   for ( size_t i = 0; i < buffer.size(); i++ ) {
     if ( expected == buffer[i].first ) {
       output_.writer().push( buffer[i].second );
