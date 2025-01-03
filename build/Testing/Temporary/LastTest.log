@@ -1,0 +1,631 @@
+Start testing: Jan 03 22:18 CST
+----------------------------------------------------------
+1/39 Testing: compile with bug-checkers
+1/39 Test: compile with bug-checkers
+Command: "/snap/cmake/1435/bin/cmake" "--build" "/home/tongyf/Desktop/minnow/build" "-t" "functionality_testing" "webget"
+Directory: /home/tongyf/Desktop/minnow/build
+"compile with bug-checkers" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+make[4]: 警告: 子 make 中强制 -j8: 重置 jobserver 模式。
+[  0%] Built target minnow_testing_debug
+[  1%] Built target minnow_testing_sanitized
+[  6%] Built target minnow_debug
+[ 12%] Built target minnow_sanitized
+[ 19%] Built target util_debug
+[ 25%] Built target util_sanitized
+[ 26%] Built target byte_stream_capacity
+[ 28%] Built target byte_stream_one_write_sanitized
+[ 28%] Built target byte_stream_basics
+[ 28%] Built target byte_stream_one_write
+[ 29%] Built target router
+[ 32%] Built target byte_stream_two_writes_sanitized
+[ 32%] Built target byte_stream_two_writes
+[ 33%] Built target byte_stream_many_writes_sanitized
+[ 34%] Built target byte_stream_stress_test_sanitized
+[ 35%] Built target byte_stream_many_writes
+[ 37%] Built target byte_stream_stress_test
+[ 38%] Built target reassembler_single_sanitized
+[ 38%] Built target reassembler_single
+[ 39%] Built target reassembler_cap_sanitized
+[ 41%] Built target reassembler_cap
+[ 42%] Built target reassembler_seq_sanitized
+[ 42%] Built target reassembler_dup_sanitized
+[ 46%] Built target reassembler_seq
+[ 46%] Built target reassembler_dup
+[ 46%] Built target reassembler_holes_sanitized
+[ 47%] Built target reassembler_holes
+[ 48%] Built target reassembler_overlapping_sanitized
+[ 50%] Built target reassembler_overlapping
+[ 51%] Built target reassembler_win_sanitized
+[ 53%] Built target reassembler_win
+[ 53%] Built target wrapping_integers_cmp_sanitized
+[ 55%] Built target wrapping_integers_wrap_sanitized
+[ 56%] Built target wrapping_integers_cmp
+[ 57%] Built target wrapping_integers_unwrap
+[ 58%] Built target wrapping_integers_wrap
+[ 60%] Built target wrapping_integers_unwrap_sanitized
+[ 61%] Built target wrapping_integers_roundtrip_sanitized
+[ 62%] Built target wrapping_integers_roundtrip
+[ 62%] Built target wrapping_integers_extra_sanitized
+[ 65%] Built target recv_connect_sanitized
+[ 65%] Built target wrapping_integers_extra
+[ 65%] Built target recv_connect
+[ 66%] Built target recv_transmit_sanitized
+[ 67%] Built target recv_window_sanitized
+[ 69%] Built target recv_transmit
+[ 70%] Built target recv_window
+[ 71%] Built target recv_reorder_sanitized
+[ 73%] Built target recv_reorder
+[ 74%] Built target recv_reorder_more_sanitized
+[ 75%] Built target recv_reorder_more
+[ 76%] Built target recv_close_sanitized
+[ 78%] Built target recv_close
+[ 78%] Built target recv_special_sanitized
+[ 79%] Built target recv_special
+[ 80%] Built target send_connect
+[ 82%] Built target send_transmit_sanitized
+[ 83%] Built target send_connect_sanitized
+[ 85%] Built target send_retx_sanitized
+[ 85%] Built target send_transmit
+[ 87%] Built target send_retx
+[ 87%] Built target send_window_sanitized
+[ 88%] Built target send_window
+[ 89%] Built target send_ack
+[ 92%] Built target send_ack_sanitized
+[ 92%] Built target send_close
+[ 94%] Built target send_close_sanitized
+[ 94%] Built target send_extra_sanitized
+[ 94%] Built target send_extra
+[ 96%] Built target net_interface_sanitized
+[ 97%] Built target net_interface
+[ 97%] Built target router_sanitized
+[ 98%] Built target byte_stream_basics_sanitized
+[100%] Built target byte_stream_capacity_sanitized
+[100%] Built target functionality_testing
+[  9%] Built target stream_copy
+[ 72%] Built target minnow_debug
+[ 90%] Built target util_debug
+[100%] Built target webget
+<end of output>
+Test time =   0.38 sec
+----------------------------------------------------------
+Test Passed.
+"compile with bug-checkers" end time: Jan 03 22:18 CST
+"compile with bug-checkers" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/39 Testing: byte_stream_basics
+3/39 Test: byte_stream_basics
+Command: "/home/tongyf/Desktop/minnow/build/tests/byte_stream_basics_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"byte_stream_basics" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_basics" end time: Jan 03 22:18 CST
+"byte_stream_basics" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/39 Testing: byte_stream_capacity
+4/39 Test: byte_stream_capacity
+Command: "/home/tongyf/Desktop/minnow/build/tests/byte_stream_capacity_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"byte_stream_capacity" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_capacity" end time: Jan 03 22:18 CST
+"byte_stream_capacity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/39 Testing: byte_stream_one_write
+5/39 Test: byte_stream_one_write
+Command: "/home/tongyf/Desktop/minnow/build/tests/byte_stream_one_write_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"byte_stream_one_write" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_one_write" end time: Jan 03 22:18 CST
+"byte_stream_one_write" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/39 Testing: byte_stream_two_writes
+6/39 Test: byte_stream_two_writes
+Command: "/home/tongyf/Desktop/minnow/build/tests/byte_stream_two_writes_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"byte_stream_two_writes" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_two_writes" end time: Jan 03 22:18 CST
+"byte_stream_two_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/39 Testing: byte_stream_many_writes
+7/39 Test: byte_stream_many_writes
+Command: "/home/tongyf/Desktop/minnow/build/tests/byte_stream_many_writes_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"byte_stream_many_writes" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_many_writes" end time: Jan 03 22:18 CST
+"byte_stream_many_writes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/39 Testing: byte_stream_stress_test
+8/39 Test: byte_stream_stress_test
+Command: "/home/tongyf/Desktop/minnow/build/tests/byte_stream_stress_test_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"byte_stream_stress_test" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_stress_test" end time: Jan 03 22:18 CST
+"byte_stream_stress_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/39 Testing: reassembler_single
+9/39 Test: reassembler_single
+Command: "/home/tongyf/Desktop/minnow/build/tests/reassembler_single_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"reassembler_single" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_single" end time: Jan 03 22:18 CST
+"reassembler_single" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/39 Testing: reassembler_cap
+10/39 Test: reassembler_cap
+Command: "/home/tongyf/Desktop/minnow/build/tests/reassembler_cap_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"reassembler_cap" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_cap" end time: Jan 03 22:18 CST
+"reassembler_cap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/39 Testing: reassembler_seq
+11/39 Test: reassembler_seq
+Command: "/home/tongyf/Desktop/minnow/build/tests/reassembler_seq_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"reassembler_seq" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_seq" end time: Jan 03 22:18 CST
+"reassembler_seq" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/39 Testing: reassembler_dup
+12/39 Test: reassembler_dup
+Command: "/home/tongyf/Desktop/minnow/build/tests/reassembler_dup_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"reassembler_dup" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_dup" end time: Jan 03 22:18 CST
+"reassembler_dup" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/39 Testing: reassembler_holes
+13/39 Test: reassembler_holes
+Command: "/home/tongyf/Desktop/minnow/build/tests/reassembler_holes_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"reassembler_holes" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_holes" end time: Jan 03 22:18 CST
+"reassembler_holes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/39 Testing: reassembler_overlapping
+14/39 Test: reassembler_overlapping
+Command: "/home/tongyf/Desktop/minnow/build/tests/reassembler_overlapping_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"reassembler_overlapping" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_overlapping" end time: Jan 03 22:18 CST
+"reassembler_overlapping" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/39 Testing: reassembler_win
+15/39 Test: reassembler_win
+Command: "/home/tongyf/Desktop/minnow/build/tests/reassembler_win_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"reassembler_win" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.62 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_win" end time: Jan 03 22:18 CST
+"reassembler_win" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/39 Testing: wrapping_integers_cmp
+16/39 Test: wrapping_integers_cmp
+Command: "/home/tongyf/Desktop/minnow/build/tests/wrapping_integers_cmp_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"wrapping_integers_cmp" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_cmp" end time: Jan 03 22:18 CST
+"wrapping_integers_cmp" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/39 Testing: wrapping_integers_wrap
+17/39 Test: wrapping_integers_wrap
+Command: "/home/tongyf/Desktop/minnow/build/tests/wrapping_integers_wrap_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"wrapping_integers_wrap" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_wrap" end time: Jan 03 22:18 CST
+"wrapping_integers_wrap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/39 Testing: wrapping_integers_unwrap
+18/39 Test: wrapping_integers_unwrap
+Command: "/home/tongyf/Desktop/minnow/build/tests/wrapping_integers_unwrap_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"wrapping_integers_unwrap" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_unwrap" end time: Jan 03 22:18 CST
+"wrapping_integers_unwrap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/39 Testing: wrapping_integers_roundtrip
+19/39 Test: wrapping_integers_roundtrip
+Command: "/home/tongyf/Desktop/minnow/build/tests/wrapping_integers_roundtrip_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"wrapping_integers_roundtrip" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.62 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_roundtrip" end time: Jan 03 22:18 CST
+"wrapping_integers_roundtrip" time elapsed: 00:00:01
+----------------------------------------------------------
+
+20/39 Testing: wrapping_integers_extra
+20/39 Test: wrapping_integers_extra
+Command: "/home/tongyf/Desktop/minnow/build/tests/wrapping_integers_extra_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"wrapping_integers_extra" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"wrapping_integers_extra" end time: Jan 03 22:18 CST
+"wrapping_integers_extra" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/39 Testing: recv_connect
+21/39 Test: recv_connect
+Command: "/home/tongyf/Desktop/minnow/build/tests/recv_connect_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"recv_connect" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"recv_connect" end time: Jan 03 22:18 CST
+"recv_connect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/39 Testing: recv_transmit
+22/39 Test: recv_transmit
+Command: "/home/tongyf/Desktop/minnow/build/tests/recv_transmit_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"recv_transmit" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.54 sec
+----------------------------------------------------------
+Test Passed.
+"recv_transmit" end time: Jan 03 22:18 CST
+"recv_transmit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/39 Testing: recv_window
+23/39 Test: recv_window
+Command: "/home/tongyf/Desktop/minnow/build/tests/recv_window_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"recv_window" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"recv_window" end time: Jan 03 22:18 CST
+"recv_window" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/39 Testing: recv_reorder
+24/39 Test: recv_reorder
+Command: "/home/tongyf/Desktop/minnow/build/tests/recv_reorder_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"recv_reorder" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"recv_reorder" end time: Jan 03 22:18 CST
+"recv_reorder" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/39 Testing: recv_reorder_more
+25/39 Test: recv_reorder_more
+Command: "/home/tongyf/Desktop/minnow/build/tests/recv_reorder_more_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"recv_reorder_more" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.70 sec
+----------------------------------------------------------
+Test Passed.
+"recv_reorder_more" end time: Jan 03 22:18 CST
+"recv_reorder_more" time elapsed: 00:00:01
+----------------------------------------------------------
+
+26/39 Testing: recv_close
+26/39 Test: recv_close
+Command: "/home/tongyf/Desktop/minnow/build/tests/recv_close_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"recv_close" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"recv_close" end time: Jan 03 22:18 CST
+"recv_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/39 Testing: recv_special
+27/39 Test: recv_special
+Command: "/home/tongyf/Desktop/minnow/build/tests/recv_special_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"recv_special" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"recv_special" end time: Jan 03 22:18 CST
+"recv_special" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/39 Testing: send_connect
+28/39 Test: send_connect
+Command: "/home/tongyf/Desktop/minnow/build/tests/send_connect_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"send_connect" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"send_connect" end time: Jan 03 22:18 CST
+"send_connect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/39 Testing: send_transmit
+29/39 Test: send_transmit
+Command: "/home/tongyf/Desktop/minnow/build/tests/send_transmit_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"send_transmit" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.73 sec
+----------------------------------------------------------
+Test Passed.
+"send_transmit" end time: Jan 03 22:18 CST
+"send_transmit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/39 Testing: send_retx
+30/39 Test: send_retx
+Command: "/home/tongyf/Desktop/minnow/build/tests/send_retx_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"send_retx" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"send_retx" end time: Jan 03 22:18 CST
+"send_retx" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/39 Testing: send_window
+31/39 Test: send_window
+Command: "/home/tongyf/Desktop/minnow/build/tests/send_window_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"send_window" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.21 sec
+----------------------------------------------------------
+Test Passed.
+"send_window" end time: Jan 03 22:18 CST
+"send_window" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/39 Testing: send_ack
+32/39 Test: send_ack
+Command: "/home/tongyf/Desktop/minnow/build/tests/send_ack_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"send_ack" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"send_ack" end time: Jan 03 22:18 CST
+"send_ack" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/39 Testing: send_close
+33/39 Test: send_close
+Command: "/home/tongyf/Desktop/minnow/build/tests/send_close_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"send_close" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"send_close" end time: Jan 03 22:18 CST
+"send_close" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/39 Testing: send_extra
+34/39 Test: send_extra
+Command: "/home/tongyf/Desktop/minnow/build/tests/send_extra_sanitized"
+Directory: /home/tongyf/Desktop/minnow/build
+"send_extra" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Passed.
+"send_extra" end time: Jan 03 22:18 CST
+"send_extra" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/39 Testing: compile with optimization
+37/39 Test: compile with optimization
+Command: "/snap/cmake/1435/bin/cmake" "--build" "/home/tongyf/Desktop/minnow/build" "-t" "speed_testing"
+Directory: /home/tongyf/Desktop/minnow/build
+"compile with optimization" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+make[4]: 警告: 子 make 中强制 -j8: 重置 jobserver 模式。
+[ 50%] Built target util_optimized
+[ 83%] Built target minnow_optimized
+[ 91%] Built target byte_stream_speed_test
+[100%] Built target reassembler_speed_test
+[100%] Built target speed_testing
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"compile with optimization" end time: Jan 03 22:18 CST
+"compile with optimization" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/39 Testing: byte_stream_speed_test
+38/39 Test: byte_stream_speed_test
+Command: "/home/tongyf/Desktop/minnow/build/tests/byte_stream_speed_test"
+Directory: /home/tongyf/Desktop/minnow/build
+"byte_stream_speed_test" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+ByteStream with capacity=32768, write_size=1500, read_size=128 reached 0.48 Gbit/s.
+<end of output>
+Test time =   0.30 sec
+----------------------------------------------------------
+Test Passed.
+"byte_stream_speed_test" end time: Jan 03 22:18 CST
+"byte_stream_speed_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/39 Testing: reassembler_speed_test
+39/39 Test: reassembler_speed_test
+Command: "/home/tongyf/Desktop/minnow/build/tests/reassembler_speed_test"
+Directory: /home/tongyf/Desktop/minnow/build
+"reassembler_speed_test" start time: Jan 03 22:18 CST
+Output:
+----------------------------------------------------------
+Reassembler to ByteStream with capacity=1500 reached 2.51 Gbit/s.
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"reassembler_speed_test" end time: Jan 03 22:18 CST
+"reassembler_speed_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 03 22:18 CST
